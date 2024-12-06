@@ -1,14 +1,18 @@
 import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom"
-import './App.scss';
 
 import Home from "./pages/Home"
 import Accommodation from "./pages/Accommodation"
 import About from "./pages/About"
 import Error from "./pages/Error"
 
+import { Header } from './components/Header';
+import { Footer } from './components/Footer';
+
 function App() {
   return (
     <BrowserRouter>
+    <Header />
+
       <main>
         <Routes>
           <Route path='/' element={<Home />} />
@@ -17,6 +21,8 @@ function App() {
           <Route path='*' element={<Error />} />
         </Routes>
       </main>
+
+      <Footer />
     </BrowserRouter>
   );
 }
