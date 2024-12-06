@@ -1,1 +1,3 @@
-# P11-kasa
+# React + Vite
+
+Projet 11 - Kasa lancé avec Vite
