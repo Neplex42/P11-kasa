@@ -1,9 +1,9 @@
-import { BrowserRouter, Route, Routes, useLocation } from "react-router-dom"
+import { BrowserRouter, Route, Routes } from "react-router-dom"
 
-import Home from "./pages/Home"
-import Accommodation from "./pages/Accommodation"
-import About from "./pages/About"
-import Error from "./pages/Error"
+import Home from "./routes/Home"
+import Accommodation from "./routes/Accommodation"
+import About from "./routes/About"
+import Error from "./pages/error/Error"
 
 import { Header } from './components/Header';
 import { Footer } from './components/Footer';
