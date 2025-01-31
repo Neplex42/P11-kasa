@@ -28,7 +28,7 @@
                 margin-left: 2.6rem;
                 transition: color 0.3s ease-in-out;
                 text-transform: uppercase;
-                color: colors.$primary;
+                color: black;
                 display: block;
                 white-space: nowrap;
                 font-size: 1.2rem;
@@ -48,16 +48,14 @@
                     display: block;
                     width: 0;
                     height: 1px;
-                    background: colors.$primary;
+                    background: black;
                     transition: all 0.3s ease-in-out;
                 }
 
                 &:hover {
-                    color: colors.$primary-dark;
-
                     &:after {
                         width: 100%;
-                        background: colors.$primary-dark;
+                        background: black;
                     }
                 }
 

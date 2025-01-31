@@ -6,8 +6,8 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: center;
-    min-height: calc(100vh - 20.9rem - 7rem);
+    justify-content: space-evenly;
+    min-height: calc(100vh - 28rem - 7rem);
     color: colors.$primary;
     text-align: center;
 
@@ -16,15 +16,25 @@
         justify-content: space-around;
     }
 
-    .error__message {
+    .error__message, .error__message span {
+        font-size: 1.8rem;
         @include mix.media-up(sm) {
             font-size: 3.6rem;
+        }
+    }
+
+    .error__message {
+        display: flex;
+        flex-direction: column;
+        @include mix.media-up(sm) {
+            flex-direction: row;
         }
     }
 
     .home__link {
         text-decoration: underline;
         font-size: 1.4rem;
+        color: black;
 
         @include mix.media-up(sm) {
             font-size: 1.8rem;

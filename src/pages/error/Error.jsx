@@ -8,7 +8,7 @@ const Error = () => {
     <section id="error-page">
       <h1 className='text-404'>404</h1>
       <p className='error__message'>
-        {error?.message || "Oups! La page que vous demandez n'existe pas."}
+        {error?.message || <>Oups! La page que<span> vous demandez n'existe pas.</span></>}
       </p>
       <Link className='home__link' to={'/'}>Retourner sur la page d'accueil</Link>
     </section>
