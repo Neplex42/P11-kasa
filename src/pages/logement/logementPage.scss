@@ -1,16 +1,17 @@
-@import '../../styles/global/_helpers';
+@use '../../styles/global/helpers' as *;
+@use '../../styles/global/mixins' as mix;
 
 .logement__page {
     padding: 2.7rem 0;
 
-    @include media-up(sm) {
+    @include mix.media-up(sm) {
         padding: 5rem 0;
     }
 
     .logement__page-content {
         padding-top: 1.5rem;
 
-        @include media-up(sm) {
+        @include mix.media-up(sm) {
             padding-top: 3rem;
         }
 
@@ -19,7 +20,7 @@
         }
 
         .accordions_container {
-            @include media-up(md) {
+            @include mix.media-up(md) {
                 display: flex;
                 justify-content: space-between;
 
@@ -28,6 +29,5 @@
                 }
             }
         }
-
     }
 }

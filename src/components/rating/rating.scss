@@ -1,10 +1,11 @@
-@import '../../styles/global/_helpers';
+@use '../../styles/global/helpers' as *;
+@use '../../styles/global/mixins' as mix;
 
 .rating {
     .rating__star {
         margin-right: 0.5rem;
 
-        @include media-up(md) {
+        @include mix.media-up(md) {
             margin-right: 1.2rem;
 
             svg {

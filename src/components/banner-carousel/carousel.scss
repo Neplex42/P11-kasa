@@ -1,10 +1,12 @@
-@import '../../styles/global/_helpers';
+@use '../../styles/global/helpers' as *;
+@use '../../styles/global/colors' as colors;
+@use '../../styles/global/mixins' as mix;
 
 .carousel {
     overflow: hidden;
     position: relative;
 
-    @include media-up(sm) {
+    @include mix.media-up(sm) {
         border-radius: 2.5rem;
     }
 
@@ -45,7 +47,7 @@
         cursor: pointer;
         transition: all 0.2s ease;
 
-        @include media-up(md) {
+        @include mix.media-up(md) {
             width: 9.6rem;
             height: 12rem;
             background-size: 70% 70%;
@@ -73,9 +75,9 @@
         transform: translateX(-50%);
         z-index: 1;
         font-size: 1.8rem;
-        color: $white;
+        color: colors.$white;
 
-        @include media-up(sm) {
+        @include mix.media-up(sm) {
             display: block;
         }
 

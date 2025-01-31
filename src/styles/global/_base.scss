@@ -1,5 +1,7 @@
-@import './fonts';
-@import '../global/helpers';
+@use './fonts' as fonts;
+@use './helpers' as *;
+@use './variables' as vars;
+@use './mixins' as mix;
 
 *,
 html,
@@ -7,7 +9,7 @@ body {
     padding: 0;
     margin: 0;
     box-sizing: border-box;
-    font-family: $font-base;
+    font-family: fonts.$font-base;
 }
 
 html {
@@ -45,41 +47,41 @@ img {
 
 p, span, h4, h5, h6, button, input, textarea, label, select, option {
     font-size: 1.2rem;
-    font-weight: $weight-medium;
+    font-weight: vars.$weight-medium;
 
-    @include media-up(sm) {
+    @include mix.media-up(sm) {
         font-size: 1.8rem;
     }
 }
 
 h1, .h1 {
     font-size: 2.4rem;
-    font-weight: $weight-medium;
+    font-weight: vars.$weight-medium;
 
-    @include media-up(sm) {
+    @include mix.media-up(sm) {
         font-size: 4.8rem;
     }
 }
 
 h2, .h2 {
     font-size: 1.8rem;
-    font-weight: $weight-medium;
+    font-weight: vars.$weight-medium;
 
-    @include media-up(sm) {
+    @include mix.media-up(sm) {
         font-size: 3.6rem;
     }
 }
 
 h3, .h3 {
     font-size: 1.8rem;
-    font-weight: $weight-medium;
+    font-weight: vars.$weight-medium;
 }
 
 .text-404 {
     font-size: 9.6rem;
-    font-weight: $weight-bold;
+    font-weight: vars.$weight-bold;
 
-    @include media-up(sm) {
+    @include mix.media-up(sm) {
         line-height: 1;
         font-size: 28.8rem;
     }
@@ -89,17 +91,17 @@ h3, .h3 {
 nav * {
     font-size: 1.2rem;
 
-    @include media-up(sm) {
+    @include mix.media-up(sm) {
         font-size: 2.4rem;
     }
 }
 
 .bold {
-    font-weight: $weight-bold;
+    font-weight: vars.$weight-bold;
 }
 
 .medium {
-    font-weight: $weight-medium;
+    font-weight: vars.$weight-medium;
 }
 
 .hidden {
@@ -122,7 +124,7 @@ section, .section {
     margin-left: 2rem;
     margin-right: 2rem;
 
-    @include media-up(md) {
+    @include mix.media-up(md) {
         margin-left: 10rem;
         margin-right: 10rem;
     }

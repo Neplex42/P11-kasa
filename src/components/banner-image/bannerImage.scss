@@ -1,15 +1,16 @@
-@import '../../styles/global/_helpers';
+@use '../../styles/global/helpers' as *;
+@use '../../styles/global/colors' as colors;
+@use '../../styles/global/mixins' as mix;
 
 .banner__image-container {
     position: relative;
     margin: 2.5rem 0 2.2rem;
-    @include flex(row, flex-start, center);
+    @include mix.flex(row, flex-start, center);
 
-    @include media-up(sm) {
+    @include mix.media-up(sm) {
         justify-content: center;
         margin: 4.6rem 0 4.3rem;
     }
-
 
     .banner__image-wrapper {
         width: 100%;
@@ -18,7 +19,7 @@
         position: relative;
         border-radius: 1rem;
 
-        @include media-up(sm) {
+        @include mix.media-up(sm) {
             border-radius: 2.5rem;
         }
 
@@ -29,14 +30,14 @@
             width: 100%;
             bottom: 0;
             left: 0;
-            background: $black;
+            background: colors.$black;
             opacity: 0.3;
         }
 
         .banner__image {
             max-height: 11.1rem;
 
-            @include media-up(sm) {
+            @include mix.media-up(sm) {
                 max-height: 22.3rem;
             }
         }
@@ -49,9 +50,9 @@
         line-height: 1;
         text-align: left;
         letter-spacing: 0;
-        color: $white;
+        color: colors.$white;
 
-        @include media-up(sm) {
+        @include mix.media-up(sm) {
             width: unset;
         }
     }

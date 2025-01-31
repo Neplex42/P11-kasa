@@ -1,11 +1,13 @@
-@import '../../styles/global/_helpers';
+@use '../../styles/global/helpers' as *;
+@use '../../styles/global/colors' as colors;
+@use '../../styles/global/mixins' as mix;
 
 .gallery__card {
     overflow: hidden;
     position: relative;
     border-radius: 1rem;
 
-    @include media-up(md) {
+    @include mix.media-up(md) {
         //min-height: 34rem;
         //min-width: 34rem;
     }
@@ -23,7 +25,7 @@
             width: 100%;
             bottom: 0;
             left: 0;
-            background: linear-gradient(180deg, transparent 0, transparent 30%, #000);
+            background: linear-gradient(180deg, transparent 0, transparent 30%, colors.$black);
             opacity: 0.8;
             transition: opacity 0.5s ease-in-out;
         }
@@ -47,7 +49,7 @@
             border-radius: 1rem;
             transition: transform 0.5s ease-in-out;
 
-            @include media-up(md) {
+            @include mix.media-up(md) {
                 aspect-ratio: 1/1;
             }
         }
@@ -62,7 +64,7 @@
         max-width: 60%;
 
         .gallery__card-title {
-            color: $white;
+            color: colors.$white;
             font-size: 1.8rem;
         }
     }

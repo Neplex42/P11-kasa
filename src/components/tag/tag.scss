@@ -1,16 +1,18 @@
-@import '../../styles/global/_helpers';
+@use '../../styles/global/helpers' as *;
+@use '../../styles/global/colors' as colors;
+@use '../../styles/global/mixins' as mix;
 
 .tag {
-    background-color: $primary;
-    color: $white;
+    background-color: colors.$primary;
+    color: colors.$white;
     height: 1.8rem;
     min-width: 8.4rem;
     padding: 0 1rem;
     text-align: center;
-    @include flex(row, center, center);
+    @include mix.flex(row, center, center);
     border-radius: 0.5rem;
 
-    @include media-up(md) {
+    @include mix.media-up(md) {
         min-width: 11.5rem;
         min-height: 2.5rem;
         font-size: 1.4rem;

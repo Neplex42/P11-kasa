@@ -1,9 +1,11 @@
-@import '../../styles/global/_helpers';
+@use '../../styles/global/helpers' as *;
+@use '../../styles/global/colors' as colors;
+@use '../../styles/global/mixins' as mix;
 
 .logement__page-content__header {
-    color: $primary;
+    color: colors.$primary;
 
-    @include media-up(md) {
+    @include mix.media-up(md) {
         display: flex;
         justify-content: space-between;
         align-items: flex-start;
@@ -11,7 +13,7 @@
 
     .content__header-left {
         margin-bottom: 1.6rem;
-        @include media-up(md) {
+        @include mix.media-up(md) {
             max-width: 85%;
         }
 
@@ -24,7 +26,7 @@
             font-size: 1.4rem;
             margin-bottom: 1rem;
 
-            @include media-up(md) {
+            @include mix.media-up(md) {
                 max-width: 85%;
                 font-size: 1.8rem;
             }
@@ -44,7 +46,7 @@
         align-items: center;
         justify-content: space-between;
 
-        @include media-up(md) {
+        @include mix.media-up(md) {
             flex-direction: column-reverse;
             align-items: flex-end;
         }
@@ -55,7 +57,7 @@
             margin-right: 1rem;
             flex-wrap: nowrap;
 
-            @include media-up(md) {
+            @include mix.media-up(md) {
                 margin: 0;
             }
         }
@@ -65,7 +67,7 @@
             align-items: center;
             justify-content: center;
 
-            @include media-up(md) {
+            @include mix.media-up(md) {
                 margin-bottom: 2rem;
             }
 
@@ -80,12 +82,11 @@
                 border-radius: 50%;
                 margin-left: 1rem;
 
-                @include media-up(md) {
+                @include mix.media-up(md) {
                     width: 6.4rem;
                     height: 6.4rem;
                 }
             }
-
         }
     }
 }

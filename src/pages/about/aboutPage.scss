@@ -1,8 +1,9 @@
-@import '../../styles/global/_helpers';
+@use '../../styles/global/helpers' as *;
+@use '../../styles/global/mixins' as mix;
 
 .about {
     .accordions_container {
-        @include media-up(md) {
+        @include mix.media-up(md) {
             padding: 0 10.8rem;
         }
     }
